@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function print(obj){
+        var ret = ''
+        for(var o in obj)
+        {var data = obj[o];
+            console.log(data);
+            
+                ret += "<li>"+ data.name + "  " + data.roll+ "</li>";
+            
+        }
+        console.log("<ul>" + ret + "</ul>");
+        document.getElementsByTagName("body")[0].innerHTML= "<ul>" + ret + "</ul>" ;
+    }
+    print([
+        {
+            'name':'nitin',
+            'roll':'12'
+        }
+    ])
+
+</script>
+</html>
